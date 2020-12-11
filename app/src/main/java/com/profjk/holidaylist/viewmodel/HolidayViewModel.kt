@@ -9,8 +9,9 @@ import com.profjk.holidaylist.network.HolidaysApi
 import kotlinx.coroutines.launch
 import java.lang.Exception
 class HolidayViewModel : ViewModel() {
-    private val holiday = MutableLiveData<Holiday>()
-    val response: LiveData<Holiday>
+    private val holiday = MutableLiveData<List<Holiday>>()
+
+    val response: MutableLiveData<List<Holiday>>
         get() = holiday
     fun getHolidayInfo(apiUrl: String){
         viewModelScope.launch{
