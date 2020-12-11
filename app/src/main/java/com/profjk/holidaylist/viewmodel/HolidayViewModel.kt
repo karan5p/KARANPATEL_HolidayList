@@ -1,3 +1,4 @@
+//991519115 Karan Patel
 package com.profjk.holidaylist.viewmodel
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -10,7 +11,6 @@ import kotlinx.coroutines.launch
 import java.lang.Exception
 class HolidayViewModel : ViewModel() {
     private val holiday = MutableLiveData<List<Holiday>>()
-
     val response: MutableLiveData<List<Holiday>>
         get() = holiday
     fun getHolidayInfo(apiUrl: String){

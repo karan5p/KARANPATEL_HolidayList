@@ -1,3 +1,4 @@
+//991519115 Karan Patel
 package com.profjk.holidaylist
 import android.os.Bundle
 import android.view.View
@@ -43,16 +44,12 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         this.getHolidayInfo(this.countryCodes[position])
     }
-
     override fun onNothingSelected(parent: AdapterView<*>?) {
         TODO("Not yet implemented")
     }
-
     private fun getHolidayInfo(countryCodes: String){
         val apiUrl = this.baseUrl + countryCodes
-
         this.holidayViewModel.getHolidayInfo(apiUrl)
-
         this.holidayViewModel.response.observe(this, {
 
             holidayList.clear()
