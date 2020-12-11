@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     }
 
     private fun getHolidayInfo(countryCodes: String){
-        val apiUrl = this.baseUrl + "countryCodes:${countryCodes}"
+        val apiUrl = this.baseUrl + countryCodes
 
         this.holidayViewModel.getHolidayInfo(apiUrl)
 
